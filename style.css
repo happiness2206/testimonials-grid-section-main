@@ -1,0 +1,138 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    background-color: rgb(231, 236, 238);
+}
+
+.main{
+    display: flex;
+    min-height: 100vh;
+    
+    justify-content: center;
+    /* flex-direction: column; */
+    align-items: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 50px;
+    max-width: 1400px;
+}
+
+.profile{
+    display: flex;
+    margin-bottom: 15px;
+    
+}
+
+.profileimage{
+    border-radius: 50px;
+    width: 60px;
+}
+
+.profilestatus, .description{
+    color: rgb(165, 168, 179);
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+
+.profiledetails{
+    margin-left: 20px;
+}
+
+.firstcard{
+    grid-column:1/3;
+    background-color: #7541C8;
+    color: white;
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top 0 right 21%;
+    
+}
+
+h3{
+    margin-bottom: 19px;
+    font-size: 20px;
+}
+
+.card{
+
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgb(225, 231, 255);
+    line-height: 1.7;
+}
+.secondcard{
+    background-color: #48556A;
+    color: white;
+
+}
+
+.thirdcard{
+    grid-column: 1/2;
+    background-color: white;
+    color: #48556A;
+    ;
+
+}
+
+.fourthcard{
+
+    grid-column: 2/4;
+    color: white;
+    background-color: #19212E;
+}
+
+.fifthcard{
+    grid-column: 4 / 4;
+    grid-row: 1/3;
+    background-color: white;
+}
+
+.fifthcard h3{
+    color: #48556A;
+}
+
+
+@media (max-width:920px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        padding: 20px;
+        
+    }
+
+    .card{
+        padding: 25px 30px;
+    }
+
+    h3 {
+        font-size: 1.05rem;
+    }
+
+    .description {
+        font-size: 0.85rem;
+    }
+
+    .profileimage {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profilestatus, .description{
+        margin-bottom: 2px;
+    }
+}
